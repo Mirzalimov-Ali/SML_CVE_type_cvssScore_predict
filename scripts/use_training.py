@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split, KFold, cross_val_score
 from sklearn.metrics import accuracy_score, classification_report
 from sklearn.multioutput import MultiOutputClassifier
-from sklearn.ensemble import GradientBoostingClassifier, RandomForestClassifier
+from sklearn.ensemble import GradientBoostingClassifier
 from joblib import dump
 from src.logger import get_logger
 from rich.table import Table
@@ -15,13 +15,13 @@ console = Console()
 os.chdir(r'C:\SML_Projects\SML_CVE_type_cwe_predict')
 
 df = pd.read_csv('data/preprocessed/preprocessed_dataset.csv')
-df = df.sample(frac=0.1, random_state=42).reset_index(drop=True)
+# df = df.sample(frac=0.4, random_state=42).reset_index(drop=True)
 
 X = df.drop(columns=['type', 'cvss_score'], errors='ignore')
 y = df[['type', 'cvss_score']]
 
 model = MultiOutputClassifier(
-    RandomForestClassifier(n_estimators=220, max_depth=5, random_state=42)
+    GradientBoostingClassifier(n_estimators=200, max_depth=5, random_state=42)
 )
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -41,7 +41,7 @@ kf = KFold(n_splits=3, shuffle=True, random_state=42)
 cv_results = {}
 
 for target in y.columns:
-    gb = GradientBoostingClassifier(n_estimators=220, max_depth=5, random_state=42)
+    gb = GradientBoostingClassifier(random_state=42)
     scores = cross_val_score(gb, X, y[target], cv=kf, scoring='f1_macro')
     cv_results[target] = scores
     logger.info(f"{target} 3-Fold CV F1 macro: {scores.mean():.3f} ± {scores.std():.3f}")
@@ -106,7 +106,8 @@ for row in results_sorted:
 console.print(table)
 
 os.makedirs('results', exist_ok=True)
-df_results = pd.DataFrame(results_sorted, columns=["Algorithm", "Test Acc", "K-Fold Mean", "K-Fold Std", "Target", "Combined"])
-df_results.to_csv('results/final_results.csv', index=False)
-
-print("Results saved to results/final_results.csv")
+temp_console = Console(record=True)
+temp_console.print(table)
+text = temp_console.export_text()
+with open('results/final_results.txt', 'a', encoding='utf-8') as f:
+    f.write(text)

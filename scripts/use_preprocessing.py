@@ -11,7 +11,7 @@ df = pd.read_csv('data/engineered/engineered_dataset.csv')
 preprocessing = Preprocessing(df, target=['type', 'cvss_score'])
 
 df_preprocessed = (
-    preprocessing.encode(include_targets=True)
+    preprocessing.encode()
     .scale()
     .get_dataset()
 )

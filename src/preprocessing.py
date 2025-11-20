@@ -36,7 +36,6 @@ class Preprocessing(BaseEstimator, TransformerMixin):
             if not include_targets and col in self.target:
                 continue
 
-
             if self.df[col].dtype == 'object':
                 enc = OrdinalEncoder(handle_unknown='use_encoded_value', unknown_value=-1)
                 self.df[col] = enc.fit_transform(self.df[[col]]).squeeze()

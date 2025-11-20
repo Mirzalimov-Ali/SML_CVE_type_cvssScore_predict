@@ -1,12 +1,18 @@
 # 🛡️ Predicting CVE Type and CVSS Score
 
-## 🧾 Projectning asosiy maqsadi
+## 🧾 Project haqida
 
+- bu dunyodagi dasturiy ta’minot va tizimlardagi zaifliklar ro‘yxati. Har bir CVE — bu ma’lum bir xavfsizlik kamchiligi yoki zaiflikni ifodalaydi.
 - CVE datasetidagi turli atributlardan foydalangan holda `type` va `cvss_score` predict qilish.  
 - Maqsad — multi-output classification model yordamida zaiflik turlarini va ularning xavf darajasini aniqlash.
 
 * **Type:** Multi-Output Classification  
 * **Target:** `type` va `cvss_score`  
+
+
+## Loyihaning foydaliligi
+- Cybersecurity mutaxassislari: zaifliklarni tez aniqlash va ularni tuzatish.
+- Developerlar va IT companylar: uz dasturlarida mavjud xavfli zaifliklarni aniqlash va ularni oldindan tuzatish.
 
 ---
 
@@ -21,7 +27,8 @@ Loyihaning asosiy malumotlari NVDning rasmiy **CVE JSON Feed 2.0** manbasidan re
 - Dataset: 102,963   
 - Features: `cve_id`, `description`, `cvss_score`, `cwe`, `vendor`, `product`, `publish_date`, `type`  
 
-### 🧹 Data Processing
+### 🧹 Data 
+
 
 - Boshlanishida raw dataset juda notekis va kup redundant malumotlarga ega edi.  
 - Data cleaning qilindi: Unnecessary columns olib tashlandi, text normalization amalga oshirildi.  
