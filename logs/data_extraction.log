@@ -1,0 +1,32 @@
+2025-11-10 20:20:30,178 - INFO - data_extraction - Fetching feed for 2023...
+2025-11-10 20:20:32,619 - INFO - data_extraction - Successfully fetched: https://nvd.nist.gov/feeds/json/cve/2.0/nvdcve-2.0-2023.json.gz
+2025-11-10 20:20:35,197 - INFO - data_extraction - Finished fetching 30478 CVEs for 2023
+2025-11-10 20:20:36,839 - INFO - use_data_extraction - 2023: 30478 rows fetched and saved to data/raw/extracted\cve_2023_dataset.csv
+2025-11-10 20:20:38,118 - INFO - use_data_extraction - 2023: 30369 rows cleaned and saved to data/raw/cleaned\cleaned_cve_2023_dataset.csv
+2025-11-10 20:20:38,118 - INFO - data_extraction - Fetching feed for 2024...
+2025-11-10 20:20:40,564 - INFO - data_extraction - Successfully fetched: https://nvd.nist.gov/feeds/json/cve/2.0/nvdcve-2.0-2024.json.gz
+2025-11-10 20:20:43,368 - INFO - data_extraction - Finished fetching 38727 CVEs for 2024
+2025-11-10 20:20:45,172 - INFO - use_data_extraction - 2024: 38727 rows fetched and saved to data/raw/extracted\cve_2024_dataset.csv
+2025-11-10 20:20:49,232 - INFO - use_data_extraction - 2024: 38603 rows cleaned and saved to data/raw/cleaned\cleaned_cve_2024_dataset.csv
+2025-11-10 20:20:49,232 - INFO - data_extraction - Fetching feed for 2025...
+2025-11-10 20:20:51,232 - INFO - data_extraction - Successfully fetched: https://nvd.nist.gov/feeds/json/cve/2.0/nvdcve-2.0-2025.json.gz
+2025-11-10 20:20:55,105 - INFO - data_extraction - Finished fetching 32761 CVEs for 2025
+2025-11-10 20:20:57,091 - INFO - use_data_extraction - 2025: 32761 rows fetched and saved to data/raw/extracted\cve_2025_dataset.csv
+2025-11-10 20:21:00,377 - INFO - use_data_extraction - 2025: 32713 rows cleaned and saved to data/raw/cleaned\cleaned_cve_2025_dataset.csv
+2025-11-10 20:21:00,377 - INFO - use_data_extraction - Total fetched: 101966, Total cleaned: 101685
+2025-11-19 23:14:39,107 - INFO - data_extraction - Fetching feed for 2023...
+2025-11-19 23:16:10,321 - INFO - data_extraction - Successfully fetched: https://nvd.nist.gov/feeds/json/cve/2.0/nvdcve-2.0-2023.json.gz
+2025-11-19 23:16:12,904 - INFO - data_extraction - Finished fetching 30482 CVEs for 2023
+2025-11-19 23:16:14,646 - INFO - use_data_extraction - 2023: 30482 rows fetched and saved to data/raw/extracted\cve_2023_dataset.csv
+2025-11-19 23:16:15,940 - INFO - use_data_extraction - 2023: 30373 rows cleaned and saved to data/raw/cleaned\cleaned_cve_2023_dataset.csv
+2025-11-19 23:16:15,940 - INFO - data_extraction - Fetching feed for 2024...
+2025-11-19 23:17:17,699 - INFO - data_extraction - Successfully fetched: https://nvd.nist.gov/feeds/json/cve/2.0/nvdcve-2.0-2024.json.gz
+2025-11-19 23:17:20,415 - INFO - data_extraction - Finished fetching 38773 CVEs for 2024
+2025-11-19 23:17:21,827 - INFO - use_data_extraction - 2024: 38773 rows fetched and saved to data/raw/extracted\cve_2024_dataset.csv
+2025-11-19 23:17:23,586 - INFO - use_data_extraction - 2024: 38648 rows cleaned and saved to data/raw/cleaned\cleaned_cve_2024_dataset.csv
+2025-11-19 23:17:23,586 - INFO - data_extraction - Fetching feed for 2025...
+2025-11-19 23:19:10,392 - INFO - data_extraction - Successfully fetched: https://nvd.nist.gov/feeds/json/cve/2.0/nvdcve-2.0-2025.json.gz
+2025-11-19 23:19:12,532 - INFO - data_extraction - Finished fetching 33991 CVEs for 2025
+2025-11-19 23:19:14,438 - INFO - use_data_extraction - 2025: 33991 rows fetched and saved to data/raw/extracted\cve_2025_dataset.csv
+2025-11-19 23:19:16,007 - INFO - use_data_extraction - 2025: 33942 rows cleaned and saved to data/raw/cleaned\cleaned_cve_2025_dataset.csv
+2025-11-19 23:19:16,008 - INFO - use_data_extraction - Total fetched: 103246, Total cleaned: 102963

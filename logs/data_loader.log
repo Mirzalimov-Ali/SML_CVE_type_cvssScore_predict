@@ -1,0 +1,18 @@
+2025-11-10 20:21:46,681 - INFO - data_loader - Loaded file: data/raw/cleaned\cleaned_cve_2023_dataset.csv
+2025-11-10 20:21:46,804 - INFO - data_loader - Loaded file: data/raw/cleaned\cleaned_cve_2024_dataset.csv
+2025-11-10 20:21:46,913 - INFO - data_loader - Loaded file: data/raw/cleaned\cleaned_cve_2025_dataset.csv
+2025-11-10 20:21:46,917 - INFO - data_loader - Data merged successfully. Shape: (101685, 8)
+2025-11-10 20:21:47,420 - INFO - data_loader - Merged data saved to data/merged\merged_dataset.csv
+2025-11-10 20:21:47,420 - INFO - use_data_loader - datasets are merged
+2025-11-10 20:22:55,325 - INFO - data_loader - Loaded file: data/raw/cleaned\cleaned_cve_2023_dataset.csv
+2025-11-10 20:22:55,441 - INFO - data_loader - Loaded file: data/raw/cleaned\cleaned_cve_2024_dataset.csv
+2025-11-10 20:22:55,535 - INFO - data_loader - Loaded file: data/raw/cleaned\cleaned_cve_2025_dataset.csv
+2025-11-10 20:22:55,538 - INFO - data_loader - Data merged successfully. Shape: (101685, 8)
+2025-11-10 20:22:56,027 - INFO - data_loader - Merged data saved to data/raw/merged\merged_dataset.csv
+2025-11-10 20:22:56,027 - INFO - use_data_loader - datasets are merged
+2025-11-19 23:20:07,891 - INFO - data_loader - Loaded file: data/raw/cleaned\cleaned_cve_2023_dataset.csv
+2025-11-19 23:20:08,022 - INFO - data_loader - Loaded file: data/raw/cleaned\cleaned_cve_2024_dataset.csv
+2025-11-19 23:20:08,134 - INFO - data_loader - Loaded file: data/raw/cleaned\cleaned_cve_2025_dataset.csv
+2025-11-19 23:20:08,137 - INFO - data_loader - Data merged successfully. Shape: (102963, 8)
+2025-11-19 23:20:08,625 - INFO - data_loader - Merged data saved to data/raw/merged\merged_dataset.csv
+2025-11-19 23:20:08,625 - INFO - use_data_loader - datasets are merged
