@@ -192,7 +192,7 @@ CVSS_PATTERNS = [
     r"unsanitized",
 ]
 
-class FeatureCreatorTransformer(BaseEstimator, TransformerMixin):
+class FeatureEngineering(BaseEstimator, TransformerMixin):
     def __init__(self):
         pass
 
