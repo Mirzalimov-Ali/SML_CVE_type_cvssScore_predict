@@ -28,7 +28,7 @@ def load_model():
 
 
 # --------------------------------------------------
-# Schemas (ИМЕНА = TRAIN DATA)
+# Schemas
 # --------------------------------------------------
 class CVEInput(BaseModel):
     cve_id: str

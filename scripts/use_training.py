@@ -7,7 +7,7 @@ import optuna
 from sklearn.model_selection import KFold, cross_val_score, cross_val_predict
 from sklearn.metrics import accuracy_score, classification_report, recall_score
 from sklearn.multioutput import MultiOutputClassifier
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import ExtraTreesClassifier
 
 from joblib import dump
 from src.logger import get_logger
@@ -44,14 +44,10 @@ kf = KFold(n_splits=3, shuffle=True, random_state=42)
 # ==============================================
 def gb_objective(trial):
 
-    gb = RandomForestClassifier(
-        n_estimators=trial.suggest_int('n_estimators', 200, 600),
-        max_depth=trial.suggest_int('max_depth', 5, 30),
-        min_samples_split=trial.suggest_int('min_samples_split', 2, 20),
-        min_samples_leaf=trial.suggest_int('min_samples_leaf', 1, 10),
-        max_features=trial.suggest_categorical(
-            'max_features', ['sqrt', 'log2', None]
-        ),
+    gb = ExtraTreesClassifier(
+        n_estimators=trial.suggest_int('n_estimators', 100, 600),
+        max_depth=trial.suggest_int('max_depth', 3, 30),
+        min_samples_leaf=trial.suggest_int('min_samples_leaf', 1, 5),
         n_jobs=-1,
         random_state=42
     )
@@ -92,7 +88,7 @@ logger.info(f"BEST PARAMS: {study.best_params}")
 # ==============================================
 # FINAL MODEL
 # ==============================================
-best_gb = RandomForestClassifier(
+best_gb = ExtraTreesClassifier(
     **study.best_params,
     random_state=42
 )
@@ -179,7 +175,7 @@ results = []
 
 console = Console()
 
-table = Table(title="Optuna (GradientBoosting Recall Tuned)", show_lines=True)
+table = Table(title="ExtraTrees MultiOutput Results", show_lines=True)
 table.add_column("Algorithm")
 table.add_column("Accuracy")
 table.add_column("Precision")
